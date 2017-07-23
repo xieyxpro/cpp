@@ -1,4 +1,4 @@
-ÅĞ¶ÏËØÊı 
+åˆ¤æ–­ç´ æ•° 
 bool isprime(int m) {
 	int i;
 	if (m == 1) return false;
@@ -9,7 +9,7 @@ bool isprime(int m) {
 	return true;
 }
 
-µÚ¼¸¸öËØÊı
+ç¬¬å‡ ä¸ªç´ æ•°
 #include<stdio.h>
 int main(void) {
     int n, i, j, k = 0;
@@ -32,7 +32,7 @@ int main(void) {
     }
 	return 0;
 } 
-Ñ¡ÔñÅÅĞò 
+é€‰æ‹©æ’åº 
 void selsort(int num[], int M) {
 	int i, j, m, k;
 	for (i = 0; i < M-1; i++) {
@@ -45,7 +45,7 @@ void selsort(int num[], int M) {
 		}
 	}
 }
-Ã°ÅİÅÅĞò 
+å†’æ³¡æ’åº 
 void bubsort(int num[], int M) {
 	for (i = 0; i < M-1; i++) {
 		for (j = 0; j < n-1-i; j++) {
@@ -53,7 +53,7 @@ void bubsort(int num[], int M) {
 		}
 	}
 }
-½»»»ÅÅĞò
+äº¤æ¢æ’åº
 void exchange(int num[], int n) {
 	for (int i = 0; i < n-1; i++) {
 		for (int j = i+1; j < n; j++) {
@@ -62,7 +62,7 @@ void exchange(int num[], int n) {
 	}
 }
 
-¿ìËÙÅÅĞò
+å¿«é€Ÿæ’åº
 void qsort(int n[], int low, int high) {
 	if (low >= high) return;
 	int first = low, last = high, key = n[first];
@@ -77,7 +77,7 @@ void qsort(int n[], int low, int high) {
 	qsort(n, first+1, high);
 }
 
-´óÍ·³éÇ©Ëã·¨
+å¤§å¤´æŠ½ç­¾ç®—æ³•
 void bihead(int A[], int M[][], int a, int b) {
 	for (int i = 0;i < a; i++) {
 		for (int j = 0; j < b; j++) {
@@ -86,7 +86,7 @@ void bihead(int A[], int M[][], int a, int b) {
 	}
 }
 
-Ä§Êõ·½¿éËã·¨
+é­”æœ¯æ–¹å—ç®—æ³•
 void square(int **A, int n) {
 	int p, q, k;
 	p = 0, q = n/2;
@@ -103,14 +103,14 @@ void square(int **A, int n) {
 	}
 }
 
-¸ß´Î·½ÇóÄ£(mÊÇºÜ´óµÄÒ»¸öÕûÊı)
-µİ¹é
+é«˜æ¬¡æ–¹æ±‚æ¨¡(mæ˜¯å¾ˆå¤§çš„ä¸€ä¸ªæ•´æ•°)
+é€’å½’
 int powmod(int n, int p) {
 	if (p == 1) return n%m;
 	if (p%2 == 0) return powmod(n, p/2)*powmod(n, p/2);
 	else return powmod(n, p/2)*powmod(n, p/2)*(n%p);
 }
-·Çµİ¹é 
+éé€’å½’ 
 int powmod(int n, int p) {
 	int ans = 1;
 	while (p > 0) {
@@ -123,9 +123,9 @@ int powmod(int n, int p) {
 	return ans;
 }
 
-²éÕÒËã·¨£º
+æŸ¥æ‰¾ç®—æ³•ï¼š
 
-¶ş·Ö²éÕÒ
+äºŒåˆ†æŸ¥æ‰¾
 int binarysearch(int A[], int key, int len) {
 	int low = 0, upper = len-1, mid;
 	while (low <= upper) {
@@ -149,65 +149,65 @@ int insertsearch(int A[], int key, int len) {
 	}
 	return -1;
 }
-ÓÃÊı×éÊµÏÖÕ»£º 
-Êı¾İ½á¹¹¶¨Òå
+ç”¨æ•°ç»„å®ç°æ ˆï¼š 
+æ•°æ®ç»“æ„å®šä¹‰
 typedef int elemtype;
 typedef struct stack_tag {
-         elemtype *elem; //Ö¸Ïò´æ·ÅÊı¾İÔªËØµÄÄÚ´æ¿é
-         int top; //Õ»¶¥±êÊ¶£¬elem[top]ÊÇÕ»¶¥ÔªËØ
-         int size; //Õ»µÄÈİÁ¿
+         elemtype *elem; //æŒ‡å‘å­˜æ”¾æ•°æ®å…ƒç´ çš„å†…å­˜å—
+         int top; //æ ˆé¡¶æ ‡è¯†ï¼Œelem[top]æ˜¯æ ˆé¡¶å…ƒç´ 
+         int size; //æ ˆçš„å®¹é‡
 		 }SQSTACK;
 
-³õÊ¼»¯Õ»
+åˆå§‹åŒ–æ ˆ
 int InitSqstack(SQSTACK *S, int n)
-{                                             //³õÊ¼»¯Ë³ĞòÕ»£¬Õ»µÄÈİÁ¿ÊÇn¡£³É¹¦Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-    S->elem=(elemtype *)malloc(n*sizeof(elemtype));  //ÎªÊı¾İÔªËØ·ÖÅäÄÚ´æ
-    if (S->elem==NULL) return 0;                                //³õÊ¼»¯Ê§°Ü
-    S->size=n;                                                //ÉèÖÃÕ»µÄÈİÁ¿
-    S->top= -1;                                              //ÉèÖÃÕ»Îª¿ÕÕ»
+{                                             //åˆå§‹åŒ–é¡ºåºæ ˆï¼Œæ ˆçš„å®¹é‡æ˜¯nã€‚æˆåŠŸåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+    S->elem=(elemtype *)malloc(n*sizeof(elemtype));  //ä¸ºæ•°æ®å…ƒç´ åˆ†é…å†…å­˜
+    if (S->elem==NULL) return 0;                                //åˆå§‹åŒ–å¤±è´¥
+    S->size=n;                                                //è®¾ç½®æ ˆçš„å®¹é‡
+    S->top= -1;                                              //è®¾ç½®æ ˆä¸ºç©ºæ ˆ
     return 1;
  } 
  
- Ïú»ÙÕ»
+ é”€æ¯æ ˆ
  void DestroySqstack(SQSTACK *S)
-{                                                           //ÊÍ·ÅÕ»ËùÕ¼ÓĞµÄÄÚ´æ
-    free(S->elem);                                 //ÊÍ·ÅÄÚ´æ£¬²¢ÉèÖÃÎªNULL
+{                                                           //é‡Šæ”¾æ ˆæ‰€å æœ‰çš„å†…å­˜
+    free(S->elem);                                 //é‡Šæ”¾å†…å­˜ï¼Œå¹¶è®¾ç½®ä¸ºNULL
     S->elem=NULL;
-    S->top= -1;                                      //½«ÆäËû³ÉÔ±ÉèÖÃ³É°²È«Öµ
+    S->top= -1;                                      //å°†å…¶ä»–æˆå‘˜è®¾ç½®æˆå®‰å…¨å€¼
     S->size=0;
 } 
 
-ÈëÕ»
+å…¥æ ˆ
 int Push(SQSTACK *S, elemtype e)
-{                      //ÔÚÕ»¶¥Ò»¶Ë²åÈëÊı¾İÔªËØe£¬²Ù×÷³É¹¦£¬Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-    if (IsSqstackFull(*S)) return 0;        //Õ»Âú£¬²Ù×÷Ê§°Ü
-    S->top++;                                          //topÔö1
-    S->elem[S->top] = e;                          //½«e¸³Öµ³ÉĞÂµÄÕ»¶¥
+{                      //åœ¨æ ˆé¡¶ä¸€ç«¯æ’å…¥æ•°æ®å…ƒç´ eï¼Œæ“ä½œæˆåŠŸï¼Œåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+    if (IsSqstackFull(*S)) return 0;        //æ ˆæ»¡ï¼Œæ“ä½œå¤±è´¥
+    S->top++;                                          //topå¢1
+    S->elem[S->top] = e;                          //å°†eèµ‹å€¼æˆæ–°çš„æ ˆé¡¶
     return 1;
 }
 
-³öÕ»
+å‡ºæ ˆ
 int Pop(SQSTACK *S, elemtype *e)
-{            //»ñÈ¡Õ»¶¥Êı¾İÔªËØ£¬²¢É¾³ıÕ»¶¥¡£²Ù×÷³É¹¦£¬Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-    if (IsSqstackEmpty(*S)) return 0;     //Èç¹ûÕ»¿Õ£¬²Ù×÷Ê§°Ü
-    *e = S->elem[S->top];                          //»ñÈ¡Õ»¶¥ÔªËØ
-    S->top--;                                             //É¾³ıÕ»¶¥
+{            //è·å–æ ˆé¡¶æ•°æ®å…ƒç´ ï¼Œå¹¶åˆ é™¤æ ˆé¡¶ã€‚æ“ä½œæˆåŠŸï¼Œåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+    if (IsSqstackEmpty(*S)) return 0;     //å¦‚æœæ ˆç©ºï¼Œæ“ä½œå¤±è´¥
+    *e = S->elem[S->top];                          //è·å–æ ˆé¡¶å…ƒç´ 
+    S->top--;                                             //åˆ é™¤æ ˆé¡¶
     return 1;
 } 
 
-ÅĞ¶ÏÕ»¿Õ¡¢Õ»Âú
+åˆ¤æ–­æ ˆç©ºã€æ ˆæ»¡
 int IsSqstackEmpty(SQSTACK  S)
-{   //Èç¹ûÕ»¿Õ£¬Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-    return S.top==-1;   //topÊÇÕ»¶¥±êÊ¶£¬ÊÇ-1Ê±±íÊ¾¿ÕÕ»
+{   //å¦‚æœæ ˆç©ºï¼Œåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+    return S.top==-1;   //topæ˜¯æ ˆé¡¶æ ‡è¯†ï¼Œæ˜¯-1æ—¶è¡¨ç¤ºç©ºæ ˆ
 }
 int IsSqstackFull(SQSTACK  S)
-{   //Èç¹ûÕ»Âú£¬Ôò·µ»Ø1£¬·ñÔò·µ»Ø0
-    return S.top==S.size-1; //top×÷ÎªelemµÄÏÂ±ê£¬Æä×î´óÖµÊÇsize-1 
+{   //å¦‚æœæ ˆæ»¡ï¼Œåˆ™è¿”å›1ï¼Œå¦åˆ™è¿”å›0
+    return S.top==S.size-1; //topä½œä¸ºelemçš„ä¸‹æ ‡ï¼Œå…¶æœ€å¤§å€¼æ˜¯size-1 
 }
 
 
-ÓÃÁ´±íÊµÏÖÕ»:
-Êı¾İ½á¹¹¶¨Òå
+ç”¨é“¾è¡¨å®ç°æ ˆ:
+æ•°æ®ç»“æ„å®šä¹‰
 typedef int elemtype;
 typedef struct node {
 	elemtype elem;
@@ -258,7 +258,7 @@ struct node* destroy(struct node* top){
 	return top;
 }
 
-ÓÃÊı×éÊµÏÖ¶ÓÁĞ
+ç”¨æ•°ç»„å®ç°é˜Ÿåˆ—
 typedef int elemtype;
 typedef struct squeue {
 	elemtype *elem;
@@ -299,7 +299,7 @@ void desqueue(squeue *q, elemtype *e) {
 	q->front = (q->front+1)%q->size;
 }
 
-Á´Ê½¶ÓÁĞ
+é“¾å¼é˜Ÿåˆ—
 typedef int elemtype;
 typedef struct NODE {
 	elemtype elem;
@@ -346,8 +346,8 @@ void delkqueue(squeue *q, elemtype *e) {
 	free(p);
 }
 
-Å·Àï¼¸µÃ·¨Çó×î´ó¹«Ô¼Êı
-µİ¹é 
+æ¬§é‡Œå‡ å¾—æ³•æ±‚æœ€å¤§å…¬çº¦æ•°
+é€’å½’ 
 int gcd(int a, int b) {
 	if (a < b) {
 		int tmp = a;
@@ -358,7 +358,7 @@ int gcd(int a, int b) {
 	if (a%b == 0) return b;
 	else return gcd(b, a%b);
 }
-·Çµİ¹é
+éé€’å½’
 int gcd(int a, int b) {
 	if (a < b) {
 		int tmp = a;
@@ -374,7 +374,7 @@ int gcd(int a, int b) {
 	return a;
 } 
 
-¿µÍĞÕ¹¿ª
+åº·æ‰˜å±•å¼€
 
-Äæ¿µÍĞÕ¹¿ª 
+é€†åº·æ‰˜å±•å¼€ 
 
